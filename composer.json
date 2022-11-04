@@ -1,6 +1,6 @@
 {
-    "name": "joeri/nova-table-card",
-    "description": "Nova custom table card. Show your latest data (orders, posts,...) as card or data you prefer.",
+    "name": "joerithegreat/nova-table-card",
+    "description": "Nova table card. Show your latest data (orders, posts,...) as card or data you prefer.",
     "keywords": [
         "laravel",
         "nova"
@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "JoeriTheGreat\\CustomTableCard\\": "src/"
+            "JoeriTheGreat\\TableCard\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "JoeriTheGreat\\CustomTableCard\\CardServiceProvider"
+                "JoeriTheGreat\\TableCard\\CardServiceProvider"
             ]
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeriTheGreat\CustomTableCard;
+namespace JoeriTheGreat\TableCard;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -50,8 +50,8 @@ class CardServiceProvider extends ServiceProvider
 	public function register()
 	{
 		$this->mergeConfigFrom(
-			__DIR__ . '/config/custom-table-card.php',
-			'custom-table-card'
+			__DIR__ . '/config/nova-table-card.php',
+			'nova-table-card'
 		);
 	}
 }

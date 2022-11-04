@@ -1,11 +1,11 @@
 <?php
 
-namespace JoeriTheGreat\CustomTableCard;
+namespace JoeriTheGreat\TableCard;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Laravel\Nova\Card;
 
-class CustomTableCard extends Card
+class TableCard extends Card
 {
     public static $instanceCount = 0;
 

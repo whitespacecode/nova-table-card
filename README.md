@@ -1,12 +1,12 @@
-# Nova Custom Table Card
+# Nova Table Card
 
-## Simple Nova Card for Custom Tables
+## Simple Nova Card for Displaying Tables
 
 Simple card table with data of you choice.
 
 It can be useful as latest order list or latest posts, ...
 
-![Nova Custom Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/screenshot.png)
+![Nova Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/screenshot.png)
 
  ## This docs are only for v. > 2.*
  In version 2 added: refresh (reload), possiblity to add id and classes to cells
@@ -35,7 +35,7 @@ public function cards()
         // ...
 
         // all the parameters are required excelpt title
-        new \JoeriTheGreat\CustomTableCard\CustomTableCard(
+        new \JoeriTheGreat\TableCard\TableCard(
             array $header, array $data, string $title, array $viewAll
         ),
     ];
@@ -45,9 +45,9 @@ public function cards()
 Example of use:
 
 ```php
-use JoeriTheGreat\CustomTableCard\CustomTableCard;
-use JoeriTheGreat\CustomTableCard\Table\Cell;
-use JoeriTheGreat\CustomTableCard\Table\Row;
+use JoeriTheGreat\TableCard\TableCard;
+use JoeriTheGreat\TableCard\Table\Cell;
+use JoeriTheGreat\TableCard\Table\Row;
 
 // ...
 public function cards()
@@ -56,7 +56,7 @@ public function cards()
         // ...
 
         // all the parameters are required except title and/or viewLink 
-        (new CustomTableCard)
+        (new TableCard)
             ->header([
                 Cell::make('Order Number'),
                 // Set sortable to true in a header Cell to allow its column's sorting
@@ -80,7 +80,7 @@ public function cards()
 
 or:
 
-You can create your own class which will extend \JoeriTheGreat\CustomTableCard\CustomTableCard in Nova/Cards directory on example.
+You can create your own class which will extend \JoeriTheGreat\TableCard\TableCard in Nova/Cards directory on example.
 
 In this separate class you are able to fetch data from models in nice clean way.
 
@@ -89,13 +89,13 @@ In this separate class you are able to fetch data from models in nice clean way.
 
 namespace App\Nova\Cards;
 
-use JoeriTheGreat\CustomTableCard\CustomTableCard;
-use JoeriTheGreat\CustomTableCard\Table\Cell;
-use JoeriTheGreat\CustomTableCard\Table\Row;
+use JoeriTheGreat\TableCard\TableCard;
+use JoeriTheGreat\TableCard\Table\Cell;
+use JoeriTheGreat\TableCard\Table\Row;
 
 use App\Models\Order;
 
-class LatestOrders extends CustomTableCard
+class LatestOrders extends TableCard
 {
     public function __construct()
     {
@@ -146,7 +146,7 @@ class LatestOrders extends CustomTableCard
 }
 ```
 
-Then register your custom class inside cards in NovaServiceProvider.php
+Then simply include your custom class like a normal card within your resource
 ```php
 use App\Nova\Cards\LatestOrders;
 
@@ -165,13 +165,13 @@ You can also show a viewAll on the table with `$this->viewAll()`
 ## Table Style Customization
 To show more data on your table, you can use the "tight" table style option designed to increase the visual density of your table rows.
 ```php
-use JoeriTheGreat\CustomTableCard\CustomTableCard;
+use JoeriTheGreat\TableCard\TableCard;
 
 protected function cards()
 {
     return [
         ...
-        CustomTableCard::make(
+        TableCard::make(
             ...
         )->style('tight'),
      ];
@@ -188,7 +188,7 @@ The pagination accepts a default `Illuminate\Pagination\LengthAwarePaginator`
 When getting your data just use the default `->paginate()` and pass your data to the paginator.<br>
 Everything else stays the same.
 ```php
-class LatestOrders extends CustomTableCard
+class LatestOrders extends TableCard
 {
     public function __construct()
     {
