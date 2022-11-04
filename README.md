@@ -8,19 +8,17 @@ It can be useful as latest order list or latest posts, ...
 
 ![Nova Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/screenshot.png)
 
- ## This docs are only for v. > 2.*
- In version 2 added: refresh (reload), possiblity to add id and classes to cells
+## Requirements
 
- In version 3: **REMOVED refresh**, fixed problem with multiple dashboards
-
-Version 4: Add compatibility for Nova v. 4
+- `php: >=8.1`
+- `laravel/nova: ^4.0`
 
  ## Installation
 
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require joeri/nova-table-card
+composer require joerithegreat/nova-table-card
 ```
 
 You must register the card with NovaServiceProvider.
