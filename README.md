@@ -6,7 +6,7 @@ Simple card table with data of you choice.
 
 It can be useful as latest order list or latest posts, ...
 
-![Nova Custom Table Card](https://raw.githubusercontent.com/m-a-k-o/nova-custom-table-card/master/screenshot.png)
+![Nova Custom Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/screenshot.png)
 
  ## This docs are only for v. > 2.*
  In version 2 added: refresh (reload), possiblity to add id and classes to cells
@@ -20,7 +20,7 @@ Version 4: Add compatibility for Nova v. 4
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require m-a-k-o/nova-custom-table-card
+composer require joeri/nova-table-card
 ```
 
 You must register the card with NovaServiceProvider.
@@ -35,7 +35,7 @@ public function cards()
         // ...
 
         // all the parameters are required excelpt title
-        new \Mako\CustomTableCard\CustomTableCard(
+        new \JoeriTheGreat\CustomTableCard\CustomTableCard(
             array $header, array $data, string $title, array $viewAll
         ),
     ];
@@ -45,9 +45,9 @@ public function cards()
 Example of use:
 
 ```php
-use Mako\CustomTableCard\CustomTableCard;
-use Mako\CustomTableCard\Table\Cell;
-use Mako\CustomTableCard\Table\Row;
+use JoeriTheGreat\CustomTableCard\CustomTableCard;
+use JoeriTheGreat\CustomTableCard\Table\Cell;
+use JoeriTheGreat\CustomTableCard\Table\Row;
 
 // ...
 public function cards()
@@ -80,7 +80,7 @@ public function cards()
 
 or:
 
-You can create your own class which will extend \Mako\CustomTableCard\CustomTableCard in Nova/Cards directory on example.
+You can create your own class which will extend \JoeriTheGreat\CustomTableCard\CustomTableCard in Nova/Cards directory on example.
 
 In this separate class you are able to fetch data from models in nice clean way.
 
@@ -89,9 +89,9 @@ In this separate class you are able to fetch data from models in nice clean way.
 
 namespace App\Nova\Cards;
 
-use Mako\CustomTableCard\CustomTableCard;
-use Mako\CustomTableCard\Table\Cell;
-use Mako\CustomTableCard\Table\Row;
+use JoeriTheGreat\CustomTableCard\CustomTableCard;
+use JoeriTheGreat\CustomTableCard\Table\Cell;
+use JoeriTheGreat\CustomTableCard\Table\Row;
 
 use App\Models\Order;
 
@@ -165,7 +165,7 @@ You can also show a viewAll on the table with `$this->viewAll()`
 ## Table Style Customization
 To show more data on your table, you can use the "tight" table style option designed to increase the visual density of your table rows.
 ```php
-use Mako\CustomTableCard\CustomTableCard;
+use JoeriTheGreat\CustomTableCard\CustomTableCard;
 
 protected function cards()
 {

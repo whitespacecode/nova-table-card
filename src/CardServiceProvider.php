@@ -1,6 +1,6 @@
 <?php
 
-namespace Mako\CustomTableCard;
+namespace JoeriTheGreat\CustomTableCard;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -21,8 +21,8 @@ class CardServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-custom-table-card', __DIR__.'/../dist/js/card.js');
-            //Nova::style('nova-custom-table-card', __DIR__.'/../dist/css/card.css');
+            Nova::script('nova-table-card', __DIR__.'/../dist/js/card.js');
+            //Nova::style('nova-table-card', __DIR__.'/../dist/css/card.css');
         });
     }
 
@@ -38,7 +38,7 @@ class CardServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-                ->prefix('nova-vendor/nova-custom-table-card')
+                ->prefix('nova-vendor/nova-table-card')
                 ->group(__DIR__.'/../routes/api.php');
     }
 

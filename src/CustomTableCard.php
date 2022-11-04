@@ -1,6 +1,6 @@
 <?php
 
-namespace Mako\CustomTableCard;
+namespace JoeriTheGreat\CustomTableCard;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Laravel\Nova\Card;
@@ -83,7 +83,7 @@ class CustomTableCard extends Card
      */
     public function component()
     {
-        return 'nova-custom-table-card';
+        return 'nova-table-card';
     }
 
     public function style(string $style)

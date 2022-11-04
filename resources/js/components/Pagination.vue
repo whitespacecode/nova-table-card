@@ -85,7 +85,7 @@ export default {
 					cards = response.data.cards;
 				}
 
-                const paginationCard = cards.find(card => card.component === 'nova-custom-table-card');
+                const paginationCard = cards.find(card => card.component === 'nova-table-card');
 
                 this.$emit('update:modelValue', paginationCard.paginator);
                 this.$emit('updateRows', paginationCard.rows);
