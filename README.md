@@ -6,7 +6,7 @@ Simple card table with data of you choice.
 
 It can be useful as latest order list or latest posts, ...
 
-![Nova Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/screenshot.png)
+![Nova Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/example.png)
 
 ## Requirements
 
