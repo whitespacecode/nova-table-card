@@ -199,3 +199,4 @@ class LatestOrders extends TableCard
     }
 }
 ```
+![Nova Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/examplePaginate.png)
