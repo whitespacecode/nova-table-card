@@ -2,6 +2,9 @@
 
 ## Simple Nova Card for Displaying Tables
 
+**NOTE**: This has been forked from [m-a-k-o/nova-custom-table-card](https://github.com/m-a-k-o/nova-custom-table-card), see [issue #8](https://github.com/m-a-k-o/nova-custom-table-card/issues/8)
+
+
 Simple card table with data of you choice.
 
 It can be useful as latest order list or latest posts, ...
