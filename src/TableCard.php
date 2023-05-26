@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeriTheGreat\TableCard;
+namespace Whitespacecode\TableCard;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Laravel\Nova\Card;

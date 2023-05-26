@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeriTheGreat\TableCard;
+namespace Whitespacecode\TableCard;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;

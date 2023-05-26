@@ -9,7 +9,7 @@ Simple card table with data of you choice.
 
 It can be useful as latest order list or latest posts, ...
 
-![Nova Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/example.png)
+![Nova Table Card](https://github.com/Whitespacecode/nova-table-card/blob/master/example.png)
 
 ## Requirements
 
@@ -21,7 +21,7 @@ It can be useful as latest order list or latest posts, ...
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require joerithegreat/nova-table-card
+composer require Whitespacecode/nova-table-card
 ```
 
 You must register the card with NovaServiceProvider.
@@ -36,7 +36,7 @@ public function cards()
         // ...
 
         // all the parameters are required excelpt title
-        new \JoeriTheGreat\TableCard\TableCard(
+        new \Whitespacecode\TableCard\TableCard(
             array $header, array $data, string $title, array $viewAll
         ),
     ];
@@ -46,9 +46,9 @@ public function cards()
 Example of use:
 
 ```php
-use JoeriTheGreat\TableCard\TableCard;
-use JoeriTheGreat\TableCard\Table\Cell;
-use JoeriTheGreat\TableCard\Table\Row;
+use Whitespacecode\TableCard\TableCard;
+use Whitespacecode\TableCard\Table\Cell;
+use Whitespacecode\TableCard\Table\Row;
 
 // ...
 public function cards()
@@ -81,7 +81,7 @@ public function cards()
 
 or:
 
-You can create your own class which will extend \JoeriTheGreat\TableCard\TableCard in Nova/Cards directory on example.
+You can create your own class which will extend \Whitespacecode\TableCard\TableCard in Nova/Cards directory on example.
 
 In this separate class you are able to fetch data from models in nice clean way.
 
@@ -90,9 +90,9 @@ In this separate class you are able to fetch data from models in nice clean way.
 
 namespace App\Nova\Cards;
 
-use JoeriTheGreat\TableCard\TableCard;
-use JoeriTheGreat\TableCard\Table\Cell;
-use JoeriTheGreat\TableCard\Table\Row;
+use Whitespacecode\TableCard\TableCard;
+use Whitespacecode\TableCard\Table\Cell;
+use Whitespacecode\TableCard\Table\Row;
 
 use App\Models\Order;
 
@@ -166,7 +166,7 @@ You can also show a viewAll on the table with `$this->viewAll()`
 ## Table Style Customization
 To show more data on your table, you can use the "tight" table style option designed to increase the visual density of your table rows.
 ```php
-use JoeriTheGreat\TableCard\TableCard;
+use Whitespacecode\TableCard\TableCard;
 
 protected function cards()
 {
@@ -202,4 +202,4 @@ class LatestOrders extends TableCard
     }
 }
 ```
-![Nova Table Card](https://github.com/JoeriTheGreat/nova-table-card/blob/master/examplePaginate.png)
+![Nova Table Card](https://github.com/Whitespacecode/nova-table-card/blob/master/examplePaginate.png)

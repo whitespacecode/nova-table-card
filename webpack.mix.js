@@ -7,4 +7,4 @@ mix
   .js('resources/js/card.js', 'js')
   .vue({ version: 3 })
   .css('resources/css/card.css', 'css')
-  .nova('joerithegreat/nova-table-card')
+  .nova('whitespacecode/nova-table-card')

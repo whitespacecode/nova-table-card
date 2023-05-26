@@ -1,5 +1,5 @@
 {
-    "name": "joerithegreat/nova-table-card",
+    "name": "whitespacecode/nova-table-card",
     "description": "Nova table card. Show your latest data (orders, posts,...) as card or data you prefer.",
     "keywords": [
         "laravel",
@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "JoeriTheGreat\\TableCard\\": "src/"
+            "Whitespacecode\\TableCard\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "JoeriTheGreat\\TableCard\\CardServiceProvider"
+                "Whitespacecode\\TableCard\\CardServiceProvider"
             ]
         }
     },

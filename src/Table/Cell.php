@@ -1,6 +1,6 @@
 <?php
 
-namespace JoeriTheGreat\TableCard\Table;
+namespace Whitespacecode\TableCard\Table;
 
 use JsonSerializable;
 use Laravel\Nova\Makeable;
