@@ -21,7 +21,7 @@ It can be useful as latest order list or latest posts, ...
 You can install the package in to a Laravel app that uses [Nova](https://nova.laravel.com) via composer:
 
 ```bash
-composer require Whitespacecode/nova-table-card
+composer require whitespacecode/nova-table-card
 ```
 
 You must register the card with NovaServiceProvider.
