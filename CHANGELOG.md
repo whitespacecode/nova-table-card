@@ -1,3 +1,7 @@
+## [1.0.3] - 2023-05-31
+
+Fixed return type
+
 ## [1.0.2] - 2023-05-26
 
 **NB! Namespace has changed from JoeriTheGreat to whitespacecode**
