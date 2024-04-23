@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-20 rounded-b">
+    <div class="bg-20 border-t border-gray-200 dark:border-gray-700 rounded-b">
         <pagination-links 
             :is="paginationComponent"
             :all-matching-resource-count="allMatchingResourceCount"

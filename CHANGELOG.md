@@ -1,3 +1,10 @@
+## [1.0.4] - 2024-04-23
+
+Fixed table style 'tight' \
+Fixed viewAll not showing \
+Add viewAll styling and positioning \
+Update README
+
 ## [1.0.3] - 2023-05-31
 
 Fixed return type

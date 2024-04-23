@@ -27,9 +27,9 @@ class TableCard extends Card
      * @param array $header
      * @param array $data
      * @param string $title
-     * @param bool|array $viewAll
+     * @param array $viewAll
      */
-    public function __construct(array $header = [], array $data = [], string $title = '', bool $viewAll = false)
+    public function __construct(array $header = [], array $data = [], string $title = '', array $viewAll = [])
     {
         parent::__construct();
 

@@ -103,7 +103,12 @@ class LatestOrders extends TableCard
         $header = collect(['Date', 'Order Number', 'Status', 'Price', 'Name']);
 
         $this->title('Latest Orders');
-        $this->viewAll(['label' => 'View All', 'link' => '/resources/orders']);
+        $this->viewAll([
+            'label' => 'View All', //Default value `View All`
+            'link' => '/resources/orders', //Required field
+            'position' => 'bottom' //Default value `top`
+            'style' => 'button' //Default value `link`
+        ]);
 
         // $orders = Order::take(10)->latest->get();
         // Data from you model
@@ -133,6 +138,10 @@ class LatestOrders extends TableCard
                 Cell::make($order['name'])
             );
         })->toArray());
+
+        //Possible style configuration
+        // $this->style = 'tight';
+
     }
 
     private function getStatusSortableData (string $status) : int
@@ -160,8 +169,21 @@ protected function cards()
  }
 ```
 
-Note: If you don't specify viewLink() on a row `Row::make()->viewLink()`, show icon will not be visible.
+#### Note: 
+If you don't specify viewLink() on a row `Row::make()->viewLink()`, show icon will not be visible.
+#### Additional Fields in viewAll
 You can also show a viewAll on the table with `$this->viewAll()` 
+- **label (optional)**: By default, it is set to 'View All'.
+- **position (optional)**: By default, it is set to 'top'. You can change it to 'bottom' if needed.
+- **style (optional)**: DThe default style is a 'link'. Alternatively, you can set it to 'button' for a button-style appearance.
+```php
+$this->viewAll([
+    'label' => '__('Latest Orders')',
+    'link' => '/resources/orders', //URL to navigate when the link is clicked
+    'position' => 'bottom', //(Possible values `top` - `bottom`)
+    'style' => 'button', //(Possible values `link` - `button`)
+]);
+```
 
 ## Table Style Customization
 To show more data on your table, you can use the "tight" table style option designed to increase the visual density of your table rows.
@@ -180,7 +202,7 @@ protected function cards()
 ```
 Or override the `$style` property on your custom class:
 ```php
-public $style = 'tight';
+$this->style = 'tight';
 ```
 
 ## Using the pagination
