@@ -8,11 +8,18 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "laravel/nova": "^4.0"
+        "laravel/nova": "^4.0",
+        "nova-kit/nova-packages-tool": "^1.17"
     },
     "autoload": {
         "psr-4": {
             "Whitespacecode\\TableCard\\": "src/"
+        }
+    },
+    "repositories": {
+        "nova": {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
         }
     },
     "extra": {
