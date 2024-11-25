@@ -29,7 +29,7 @@ class TableCard extends Card
      * @param string $title
      * @param array $viewAll
      */
-    public function __construct(array $header = [], array $data = [], string $title = '', array $viewAll = [])
+    public function __construct(array $header = [], array $data = [], string $title = '', array $viewAll = [], string $queryKey = '')
     {
         parent::__construct();
 
@@ -40,6 +40,7 @@ class TableCard extends Card
             'rows' =>  $data,
             'title' =>  $title,
             'viewAll' =>  $viewAll,
+            'queryKey' =>  $queryKey,
             'showBorders' => false,
         ]);
     }
@@ -62,6 +63,11 @@ class TableCard extends Card
     public function viewAll(array $viewAll)
     {  
         return $this->withMeta(['viewAll' => $viewAll]);
+    }
+
+    public function queryKey(string $queryKey)
+    {  
+        return $this->withMeta(['queryKey' => $queryKey]);
     }
 
     public function paginator(LengthAwarePaginator $paginator)

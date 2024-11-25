@@ -29,6 +29,7 @@ export default {
     name: 'Pagination',
     props: {
         modelValue: Object,
+		queryKey: '',
     },
     mixins: [
 		Paginatable,
@@ -72,11 +73,13 @@ export default {
 	},
     methods: {
 		selectPage(page) {
+			const queryKey = this.queryKey;
+
 			this.currentPage = page;
 
 			Nova.request().get(this.path, {
 				params: {
-					page: this.currentPage,
+					[queryKey || 'page']: page
 				}
 			}).then(response => {
 				let cards = response.data;
@@ -85,7 +88,9 @@ export default {
 					cards = response.data.cards;
 				}
 
-                const paginationCard = cards.find(card => card.component === 'nova-table-card');
+				const paginationCard = cards.find(card =>
+					card.queryKey === queryKey || (queryKey === '' && card.component === 'nova-table-card')
+				);
 
                 this.$emit('update:modelValue', paginationCard.paginator);
                 this.$emit('updateRows', paginationCard.rows);

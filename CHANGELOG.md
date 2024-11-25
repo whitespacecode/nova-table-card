@@ -1,3 +1,8 @@
+## [1.0.4] - 2024-11-25
+
+Fixed multiple pagination instances possible \
+Update README
+
 ## [1.0.4] - 2024-04-23
 
 Fixed table style 'tight' \

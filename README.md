@@ -232,3 +232,15 @@ class LatestOrders extends TableCard
 }
 ```
 ![Nova Table Card](https://github.com/Whitespacecode/nova-table-card/blob/master/examplePaginate.png)
+
+### Multiple TableCards with pagination per page
+Sometimes you may need to render multiple `TableCard` instances with pagination on the same page or dashboard. However, those paginator instances use the `page` query string to track the current page and the paginators will conflict. <br/>To resolve this, you can customize the query string the name of the query string used by each paginator by passing a third argument to the `paginate` method. <br/>
+Official documentation in the [Laravel Pagination Docs](https://laravel.com/docs/11.x/pagination#multiple-paginator-instances-per-page).
+
+```php
+// Set a unique query key for this paginator
+$this->queryKey('orders'); 
+
+// Pass the query key to paginate
+$orders = Orders::paginate(5, ['*'], 'orders');
+```

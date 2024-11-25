@@ -47,7 +47,12 @@
             </a>
         </div>
 
-        <Pagination v-if="paginator" v-model="paginator" @update-rows="update"></Pagination>
+        <Pagination 
+            v-if="paginator" 
+            v-model="paginator" 
+            :query-key="queryKey"
+            @update-rows="update"
+        ></Pagination>
     </div>
 </template>
 
@@ -71,6 +76,7 @@ export default {
             header: [],
             title: '',
             viewAll: null,
+            queryKey: '',
             paginator: null,
         }
     },
@@ -97,7 +103,7 @@ export default {
         },
         viewAllBottomPosition() {
             return this.viewAll && this.viewAll.position && this.viewAll.position === 'bottom';
-        }
+        },
     },
     methods: {
         update(event){
@@ -105,13 +111,14 @@ export default {
         }
     },
     created () {
-		const {header, rows, title, paginator, viewAll} = this.card;
+		const {header, rows, title, paginator, viewAll, queryKey} = this.card;
 
 		this.header = header;
 		this.title = title;
         this.rows = rows;
         this.paginator = paginator;
         this.viewAll = viewAll;
+        this.queryKey = queryKey;
 	},
 }
 </script>
