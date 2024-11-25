@@ -141,6 +141,7 @@ class LatestOrders extends TableCard
 
         //Possible style configuration
         // $this->style = 'tight';
+        // $this->width = 'full';
 
     }
 
@@ -203,6 +204,12 @@ protected function cards()
 Or override the `$style` property on your custom class:
 ```php
 $this->style = 'tight';
+```
+
+Change the width of the table cards (1/3, 1/2, or full) <br/>
+By default, it is set to 'full'
+```php
+$this->width = '1/3';
 ```
 
 ## Using the pagination
