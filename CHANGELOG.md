@@ -1,4 +1,9 @@
-## [1.0.4] - 2024-11-25
+## [1.1.0] - 2024-12-16
+
+Add Laravel Nova V5 Support \
+Update README
+
+## [1.0.5] - 2024-11-25
 
 Fixed multiple pagination instances possible \
 Update README
